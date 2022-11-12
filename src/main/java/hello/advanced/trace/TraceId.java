@@ -21,11 +21,11 @@ public class TraceId {
         return UUID.randomUUID().toString().substring(0, 8);
     }
 
-    private TraceId createNextId() { // 메서드 깊이 증가 시 사용할 메서드
+    public TraceId createNextId() { // 메서드 깊이 증가 시 사용할 메서드
         return new TraceId(id, level+1);
     }
 
-    private TraceId createPreviousId() { // 메서드 깊이 증가 시 사용할 메서드
+    public TraceId createPreviousId() { // 메서드 깊이 증가 시 사용할 메서드
         return new TraceId(id, level-1);
     }
 
