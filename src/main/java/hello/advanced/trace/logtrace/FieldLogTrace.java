@@ -12,6 +12,7 @@ public class FieldLogTrace implements LogTrace{
     private static final String EX_PREFIX = "<X-";
 
     private TraceId traceIdHolder; //traceId 동기화, 동기화 이슈 발생(스프링 빈으로 등록했으니까)
+    // 싱글톤으로 등록 == jvm에 이 객체가 딱 1개
 
     @Override
     public TraceStatus begin(String message) {
