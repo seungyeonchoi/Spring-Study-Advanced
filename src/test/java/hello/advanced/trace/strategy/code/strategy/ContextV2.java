@@ -1,20 +1,11 @@
-package hello.advanced.trace.strategy.code;
+package hello.advanced.trace.strategy.code.strategy;
 
 import lombok.extern.slf4j.Slf4j;
 
-/**
- * 변하지 않는 로직을 가지고 있음
- */
 @Slf4j
-public class ContextV1 {
+public class ContextV2 {
 
-    private Strategy strategy; // 필드에 전략을 보관하는 방식
-
-    public ContextV1(Strategy strategy) {
-        this.strategy = strategy;
-    }
-
-    public void execute() {
+    public void execute(Strategy strategy) { // 전략을 execute 가 호출될 때 마다 항상 받아옴
         long startTime = System.currentTimeMillis();
         //비즈니스 로직 실행
         strategy.call(); // 위임
