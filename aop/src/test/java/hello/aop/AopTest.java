@@ -5,6 +5,7 @@ import hello.aop.order.OrderService;
 import hello.aop.order.aop.AspectV1;
 import hello.aop.order.aop.AspectV2;
 import hello.aop.order.aop.AspectV3;
+import hello.aop.order.aop.AspectV4;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -15,7 +16,7 @@ import org.springframework.context.annotation.Import;
 
 @Slf4j
 @SpringBootTest
-@Import(AspectV3.class) //AspectV1 읽어서 빈 등록
+@Import(AspectV4.class) //AspectV1 읽어서 빈 등록
 public class AopTest {
 
     @Autowired
